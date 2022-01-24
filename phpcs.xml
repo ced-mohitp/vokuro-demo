@@ -14,7 +14,7 @@
     <arg name="basepath" value="."/>
 
     <!-- Relative path to your ruleset.xml -->
-    <rule ref="vendor/suin/phpcs-psr4-sniff/src/Suin"/>
+    <rule ref="~/.composer/vendor/suin/phpcs-psr4-sniff/src/Suin"/>
 
     <!-- Optional: If you have to specify composer.json path, please add
     following section. -->
