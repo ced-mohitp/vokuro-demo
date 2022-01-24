@@ -6,11 +6,11 @@ jobs:
   phpstan:
     runs-on: ubuntu-latest
     steps:
-    - name: Composer install
-        uses: MilesChou/composer-action@master
-        with:
-        args: install
-    - name: Phalcon action
+        name: Composer install
+      - uses: MilesChou/composer-action@master
+      - with: php-actions/composer@v5
+          args: install
+      - name: Phalcon action
         uses: mileschou/phalcon-action@master
         with:
-        args: php vendor/bin/phpunit
+          args: php vendor/bin/phpunit
