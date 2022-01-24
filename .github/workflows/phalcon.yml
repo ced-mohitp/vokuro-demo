@@ -5,10 +5,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Composer install
-          uses: MilesChou/composer-action@master
-          with:
+        uses: MilesChou/composer-action@master
+        with:
           args: install
       - name: Phalcon action
-          uses: mileschou/phalcon-action@master
-          with:
+        uses: mileschou/phalcon-action@master
+        with:
           args: php vendor/bin/phpunit
