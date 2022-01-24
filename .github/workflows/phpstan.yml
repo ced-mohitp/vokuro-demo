@@ -6,10 +6,11 @@ jobs:
   phpstan:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: php-actions/composer@v5
-
-      - name: PHPStan Static Analysis
-        uses: php-actions/phpstan@v3
+    - name: Composer install
+        uses: MilesChou/composer-action@master
         with:
-          path: src/
+        args: install
+    - name: Phalcon action
+        uses: mileschou/phalcon-action@master
+        with:
+        args: php vendor/bin/phpunit
