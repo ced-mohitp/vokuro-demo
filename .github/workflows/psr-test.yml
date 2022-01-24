@@ -22,7 +22,7 @@ jobs:
                   restore-keys: ${{ runner.os }}-composer-
 
             - name: Install PHP_CodeSniffer composer package
-              run: composer global require "squizlabs/php_codesniffer=3.*"
+              run: composer global require "suin/phpcs-psr4-sniff"
 
             - name: Validate PSR-4 Code Style
-              run: ~/.composer/vendor/bin/phpcs --standard=PSR4
+              run: ~/.composer/vendor/bin/phpcs
