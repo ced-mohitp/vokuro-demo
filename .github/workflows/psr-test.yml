@@ -25,4 +25,4 @@ jobs:
               run: composer global require "suin/phpcs-psr4-sniff"
 
             - name: Validate PSR-4 Code Style
-              run: ~/.composer/vendor/bin/phpcs
+              run: ~/.composer/vendor/bin/phpcs --standard=./phpcs.xml
