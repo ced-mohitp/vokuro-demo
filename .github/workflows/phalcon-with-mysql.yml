@@ -73,7 +73,7 @@ jobs:
           vendor/bin/phinx migrate
           vendor/bin/phinx seed:run
         env:
-          DB_PORT: ${{ job.services.mysql.ports['3306'] }
+          DB_PORT: ${{ job.services.mysql.ports['3306'] }}
 
       - name: Run Tests
         run: |
