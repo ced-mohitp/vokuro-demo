@@ -1,4 +1,4 @@
-name: Static Analysis
+name: CI
 
 on: [push]
 
@@ -6,11 +6,10 @@ jobs:
   phpstan:
     runs-on: ubuntu-latest
     steps:
-        name: Composer install
-      - uses: MilesChou/composer-action@master
-      - with: php-actions/composer@v5
-          args: install
-      - name: Phalcon action
-        uses: mileschou/phalcon-action@master
+      - uses: actions/checkout@v2
+      - uses: php-actions/composer@v5
+
+      - name: PHPStan Static Analysis
+        uses: php-actions/phpstan@v3
         with:
-          args: php vendor/bin/phpunit
+          path: src/
